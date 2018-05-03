@@ -1,0 +1,128 @@
+
+<!DOCTYPE HTML>
+
+
+
+<html>
+
+<head>
+
+<script>
+	
+	<!-- this is a switch statement that utilizes a function sending a function towards the choice of character -->
+	var player;
+	function SelectCharacter(selected){
+	
+		switch(selected){
+	
+			case "Knight":
+				document.getElementById("CharacterPic").src= 'Knight.png' ;
+			player={"Name":"Knight", "Health":5};
+			break;
+			
+			case "Wizard":
+				document.getElementById("CharacterPic").src='Wizard.png' ;
+			player={"Name":"Wizard", "Health":5};
+			break;
+				
+			case "Archer":
+				document.getElementById("CharacterPic").src='Archer.png' ;
+			player={"Name":"Archer", "Health":5};
+			break;
+	
+	
+		}
+	
+	
+	
+	}
+	
+	function go(){
+	
+	document.getElementById("CharacterSelect").style.display="none";
+	document.getElementById("game").style.display="initial";
+	document.getElementById("ClassName").innerHTML=player.Name;
+	
+	
+	
+	}
+	
+	</script>
+
+
+
+
+
+<style>
+	
+	#CharacterSelect{
+	
+	width:900px;
+	height:400px;
+	
+	}
+	
+	#title{
+	
+	font-family:papyrus;
+	
+	}
+
+	#CharacterPic,#StatContainer,#Selector{
+	display:inline-block;
+	height:300px;
+	width: 300px;
+	float: left;
+	}
+	.boy{
+	display: block;
+	width: inherit;
+	height: 100px;
+	}
+	
+	#game{
+	
+	display: none;
+	
+	}
+
+
+
+	</style>
+</head>
+<title>
+Character select:
+</title>
+<body>
+	<h1 id= "title"> Choose your character <h1>
+	<div id="CharacterSelect"> 
+		<img id="CharacterPic">
+		<div id="StatContainer">
+		<p>Character Background:</p>
+		</div>
+		<div id="Selector">
+			<button class="boy" type="button" onclick="SelectCharacter ('Knight')"> Knight </button>
+			<button class="boy" type="button" onclick="SelectCharacter ('Wizard')"> Wizard </button>
+			<button class="boy" type="button" onclick="SelectCharacter ('Archer')"> Archer </button>
+		</div>
+		<button class="boy" type="button" onclick="go()" > Let's go   </button>
+	</div>
+	<div id="game"> <h1 id= "ClassName"> vbv </h1> </div>
+	
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
